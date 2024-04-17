@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Genres</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="/" class="project-name">VibeVerse</a>
+            <a href="/top-tracks" class="navpick">Top Tracks</a>
+            <a href="/top-artists" class="navpick">Top Artists</a>
+            <a href="/top-genres" class="navpick">Top Genres</a>
+        </div> 
+    </header>
+
+    <div class="container">
+        <h2>Top Genres</h2>
+        <ul class="genre-list">
+            {% for genre in top_genres %}
+            <li class="genre-item">{{ genre }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <footer>
+        &copy; 2024 Mohamed Ehab
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Tracks</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="/" class="project-name">VibeVerse</a>
+            <a href="/top-tracks" class="navpick">Top Tracks</a>
+            <a href="/top-artists" class="navpick">Top Artists</a>
+            <a href="/top-genres" class="navpick">Top Genres</a>
+        </div> 
+    </header>
+    <h1>Top Tracks</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/top-tracks?time_range=short_term">Short Term</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/top-tracks?time_range=medium_term">Medium Term</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/top-tracks?time_range=long_term">Long Term</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      
+    <div class="container">
+        <div class="tracks">
+            {% for track in tracks %}
+                <div class="track">
+                    <img src="{{ track.image_url }}" alt="Album Artwork">
+                    <h2>{{ track.name }}</h2>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Mohamed Ehab
+    </footer>
+</body>
+</html>

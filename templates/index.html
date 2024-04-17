@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="/" class="project-name">VibeVerse</a>
+            <a href="/top-tracks" class="navpick">Top Tracks</a>
+            <a href="/top-artists" class="navpick">Top Artists</a>
+            <a href="/top-genres" class="navpick">Top Genres</a>
+            <a href="{{ url_for('login') }}" class="login">Login with Spotify</a>
+        </div> 
+    </header>
+    <div class="container">
+        <div class="options">
+            <h2>Choose an option:</h2>
+            <a href="{{ url_for('top_artists') }}" class="btn">View Top Artists</a>
+            <a href="{{ url_for('top_tracks') }}" class="btn">View Top Tracks</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Mohamed Ehab
+    </footer>
+</body>
+</html>

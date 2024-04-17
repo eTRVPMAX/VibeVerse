@@ -1,0 +1,191 @@
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+header {
+    background-color: #191414;
+    color: #1db954;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 25px 0 0 0;
+}
+
+nav, .options{
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav a, .options {
+    color: #1db954;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #191414;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #222;
+}
+
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1db954;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #24cc63;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #191414;
+    color: #ffffff;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}
+.tracks, .artists, .genres  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.track, .artist{
+    border: 1px solid #000000;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.track h2, .artists h2 {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+.track img, .artists img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+
+.btn {
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+
+.btn:visited {
+    color: white;
+}
+
+.main header{
+    margin: 500px;
+    color: #000000;
+}
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+.project-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+
+.project-name:hover {
+    background-color: transparent;
+  }
+
+
+.navbar a {
+
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+.navbar .navpick:hover {
+    background-color: #1db954;
+    color: black;
+  }
+
+.navbar-nav {
+    display: inline-block;
+  }
+
+.navbar-nav .nav-item {
+    list-style: none;
+    display: inline-block;
+  }
+
+.login {
+    margin-left: auto;
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+
+.genre-list {
+            counter-reset: genre-counter;
+            list-style-type: none;
+        }
+        .genre-item {
+            font-size: 20px;
+        }
+.genre-item::before {
+            content: counter(genre-counter) ". ";
+            counter-increment: genre-counter;
+            font-weight: bold;
+            margin-right: 5px;
+        }

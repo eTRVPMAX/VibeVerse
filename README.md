@@ -22,7 +22,7 @@ VibeVerse is a web application designed to enhance the music listening experienc
 ## Installation
 1. Clone the repository:
     ```
-    git clone https://github.com/eTRVPMAX/vibeverse.git
+    git clone https://github.com/eTRVPMAX/VibeVerse.git
     ```
 2. Install dependencies:
     ```

@@ -37,3 +37,6 @@ VibeVerse is a web application designed to enhance the music listening experienc
 
 ## Contributors
 - [Mohamed Ehab](https://github.com/eTRVPMAX)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
